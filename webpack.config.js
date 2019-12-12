@@ -37,7 +37,7 @@ module:{
         {test:/\.(jpg|png|gif|bmp|jpeg)$/,use:'url-loader?limit=500&name=[hash:8]-[name].[ext]'},
         {test:/\.js$/,use:'babel-loader',exclude:/node_modules/},
         {test:/\.vue$/,use:'vue-loader'},//处理.vue的loader
-       // {test:/\.(ttf|eot|svg|woff|woff2)$/,use:'url-loader'}
+        {test:/\.(ttf|eot|svg|woff|woff2)$/,use:'url-loader'}
 
     ]
 },
