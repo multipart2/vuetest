@@ -15,7 +15,10 @@
 
 
             <!--页面主题区 开始 路由router-view 区域-->
+             <transition><!--mode="out-in" 不能解决动画效果产生的滚动条-->
             <router-view></router-view>
+            </transition>
+            
             <!--页面主题区 结束-->
 
 
@@ -68,5 +71,23 @@ export default {
 <style scoped>
 .app-container{
     padding-top: 40px;
+    overflow-x: hidden;
+}
+.v-enter
+{
+    opacity: 0;
+    transform: translateX(100%);
+    
+}
+
+.v-leave-to{
+    opacity: 0;
+    transform: translateX(-100%);
+    position: absolute;
+}
+
+.v-enter-active,
+.v-leave-active{
+    transition: all 4s ease;
 }
 </style>
